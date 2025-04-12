@@ -11,10 +11,3 @@ public class JobListingApiApplication {
 	}
 
 }
-/*
-todo
-sorting
-filetring
-pagination
-
- */

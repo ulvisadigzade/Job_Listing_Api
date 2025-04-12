@@ -56,7 +56,7 @@ public class JobService {
     // get last date
     public LocalDateTime getLastTime(){
         List<Job> jobs = jobRepository.findAll();
-        if(jobs.isEmpty())throw new RuntimeException("exception");
+        if(jobs.isEmpty())return null;
         return jobs.stream()
                 .map(Job::getDatePosed)
                 .max(LocalDateTime::compareTo)

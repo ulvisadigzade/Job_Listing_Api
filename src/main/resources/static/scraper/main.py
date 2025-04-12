@@ -14,8 +14,6 @@ def send_data_to_spring():
     target_url = "http://localhost:8080/scrape/"
 
     last_time = requests.get(target_url+"last")
-    print(last_time.text)
-
 
     job_datas = scrape(last_time.text)
 
