@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: JobListingAPI
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/job_listing_api
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:password}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+        # Remove or keep the implicit-strategy as default
+        # implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
